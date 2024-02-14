@@ -50,7 +50,7 @@ th,
 }
 
 #canvas {
-  background-image: url('/src/img/canvasBackground.png');
+  background-image: url('src/img/canvasBackground.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
