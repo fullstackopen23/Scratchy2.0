@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scratchy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <img id="logo" src="src/img/ScratchyLogo.png" alt="logo">
+
+    <div class="timerWrapper">
+      <p id="score"></p>
+      <p id="timer"></p>
+      <img id="pauseBtn" src="src/img/menu/pause.png" alt="pauseBtn">
+    </div>
+
+    <div class="canvasWrapper">
+      <canvas id="canvas"></canvas>
+
+      <div class="leaderboardScreen inactive">
+        <input id="closeLeaderboardBtn" type="image" src="src/img/shop/close.png" alt="close btn">
+        <h2>Leaderboard</h2>
+        <div class="tableWrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="restartScreen inactive">
+        <p id="yourTime"></p>
+        <p id="yourHighscore"></p>
+        <form class="input inactive">
+          <p>Name</p>
+          <input name="playerName" id="nameInput" maxlength="15" required type="text">
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
+
+        <img id="restartBtn" src="src/img/menu/restart.png" alt="restartBtn">
+      </div>
+
+      <div class="menuScreen">
+        <div class="startGameWrapper">
+          <img id="startGameBtn" src="src/img/menu/play.png" alt="playBtn">
+        </div>
+
+        <div class="menuButtons">
+          <input id="shopBtn" type="image" src="src/img/menu/shop.png" alt="shopBtn">
+          <input id="leaderboardBtn" type="image" src="src/img/menu/prize.png" alt="prizeBtn">
+          <input id="soundBtn" type="image" src="src/img/menu/sound.png" alt="muteBtn">
+        </div>
+      </div>
+
+      <div class="shopScreen inactive">
+        <input id="closeShopBtn" type="image" src="src/img/shop/close.png" alt="close btn">
+        <h2>Shop</h2>
+        <div class="characters">
+          <p>Select your character</p>
+          <div class="img">
+            <img class="selected" id="char1Shop" src="src/img/shop/char1.png" alt="char1">
+            <img id="char2Shop" src="src/img/shop/char2.png" alt="char2">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="controlsContainer">
+      <div class="ad">
+        <input id="aButton" type="image" src="src/img/controls/A.png" alt="" />
+        <input id="dButton" type="image" src="src/img/controls/D.png" alt="" />
+      </div>
+      <div class="space">
+        <input id="space" type="image" src="src/img/controls/SPACE.png" alt="" />
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- LEVEL BACKGROUNDS -->
+  <img id="bg1" src="src/img/bg/level1.png" alt="bg" />
+  <img id="bg2" src="src/img/bg/level2.png" alt="bg" />
+  <img id="bg3" src="src/img/bg/level3.png" alt="bg" />
+  <img id="bg4" src="src/img/bg/level4.png" alt="bg" />
+
+  <!-- SPRITES -->
+  <img id="char1" src="src/img/sprites/char1.png" alt="char1">
+  <img id="char2" src="src/img/sprites/char2.png" alt="char2">
+  <img id="coin" src="src/img/sprites/coin.png" alt="coin">
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

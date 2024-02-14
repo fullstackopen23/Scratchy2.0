@@ -1,0 +1,3 @@
+TODO
+[] Make it possible to use keyboard to exit menu and restart game
+[] Make it that u can only append to list with firebase
