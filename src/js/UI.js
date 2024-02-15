@@ -6,6 +6,9 @@ import { firebase } from '../../main'
 import { map } from '../../main'
 import { transformToSeconds } from './utils'
 
+import soundOnImg from '../img/menu/sound.png'
+import soundOffImg from '../img/menu/sound_off.png'
+
 const shopScreen = document.querySelector('.shopScreen')
 const menuScreen = document.querySelector('.menuScreen')
 const leaderboardScreen = document.querySelector('.leaderboardScreen')
@@ -97,10 +100,10 @@ export default class UI {
     soundBtn.addEventListener('click', () => {
       if (coin.soundOn) {
         coin.soundOn = false
-        soundBtn.src = '../src/img/menu/sound_off.png'
+        soundBtn.src = soundOffImg
       } else {
         coin.soundOn = true
-        soundBtn.src = '../src/img/menu/sound.png'
+        soundBtn.src = soundOnImg
       }
       storage.storeAudioSettings(coin.soundOn)
     })
@@ -160,9 +163,9 @@ export default class UI {
 
   updateSoundBtn() {
     if (coin.soundOn) {
-      soundBtn.src = '../src/img/menu/sound.png'
+      soundBtn.src = soundOnImg
     } else {
-      soundBtn.src = '../src/img/menu/sound_off.png'
+      soundBtn.src = soundOffImg
     }
   }
 

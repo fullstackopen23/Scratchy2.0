@@ -1,6 +1,12 @@
 const spaceBtn = document.getElementById('space')
 const dBtn = document.getElementById('dButton')
 const aBtn = document.getElementById('aButton')
+import abBtnImg from '../img/controls/Ab.png'
+import dbBtnImg from '../img/controls/Db.png'
+import spacebBtnImg from '../img/controls/SPACEb.png'
+import aBtnImg from '../img/controls/A.png'
+import dBtnImg from '../img/controls/D.png'
+import spaceBtnImg from '../img/controls/SPACE.png'
 
 export default class Movement {
   constructor() {
@@ -111,28 +117,28 @@ export default class Movement {
 
   handleJump() {
     this.up = true
-    spaceBtn.src = 'src/img/controls/SPACEb.png'
+    spaceBtn.src = spacebBtnImg
   }
   handleJumpKeyup() {
     this.up = false
-    spaceBtn.src = 'src/img/controls/SPACE.png'
+    spaceBtn.src = spaceBtnImg
   }
 
   handleGoRight() {
     this.right = true
-    dBtn.src = 'src/img/controls/Db.png'
+    dBtn.src = dbBtnImg
   }
   handleGoRightKeyup() {
     this.right = false
-    dBtn.src = 'src/img/controls/D.png'
+    dBtn.src = dBtnImg
   }
 
   handleGoLeft() {
     this.left = true
-    aBtn.src = 'src/img/controls/Ab.png'
+    aBtn.src = abBtnImg
   }
   handleGoLeftKeyup() {
     this.left = false
-    aBtn.src = 'src/img/controls/A.png'
+    aBtn.src = aBtnImg
   }
 }

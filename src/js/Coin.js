@@ -1,6 +1,6 @@
 import { collides } from './utils'
 const coinImg = document.getElementById('coin')
-const coinAudio = new Audio('../src/audio/coin.mp3')
+const coinAudio = new Audio('/audio/coin.mp3')
 
 export default class Coin {
   constructor(game) {
