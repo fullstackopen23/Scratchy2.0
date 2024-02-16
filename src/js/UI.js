@@ -30,7 +30,6 @@ const timerWrapper = document.querySelector('.timerWrapper')
 const scoreText = document.getElementById('score')
 const soundBtn = document.getElementById('soundBtn')
 const shopBtn = document.getElementById('shopBtn')
-const logo = document.getElementById('logo')
 
 const closeShopBtn = document.getElementById('closeShopBtn')
 const closeLeaderboardBtn = document.getElementById(
@@ -63,7 +62,6 @@ export default class UI {
     menuScreen.style.height = this.game.canvas.height + 'px'
     menuScreen.style.width = this.game.canvas.height + 'px'
     timerWrapper.style.width = this.game.canvas.width + 'px'
-    logo.style.width = this.game.canvas.width * 0.7 + 'px'
   }
 
   addListeners() {
