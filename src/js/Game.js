@@ -16,7 +16,7 @@ export default class Game {
     this.gameStarted = false
     this.timePaused = 0
     this.timeWhenPaused = 0
-    this.scoreToFinish = 1
+    this.scoreToFinish = 20
     this.timeFinished = null
     this.highscore = null
     this.isNewHighscore = false

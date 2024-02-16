@@ -21,24 +21,35 @@ export default class Movement {
     document.addEventListener('keydown', (e) => {
       switch (e.key.toLowerCase()) {
         case 'd':
+          e.preventDefault()
           this.handleGoRight()
           break
         case 'arrowright':
+          e.preventDefault()
           this.handleGoRight()
           break
         case 'arrowleft':
+          e.preventDefault()
           this.handleGoLeft()
           break
         case 'a':
+          e.preventDefault()
+
           this.handleGoLeft()
           break
         case 'w':
+          e.preventDefault()
+
           this.handleJump()
           break
         case ' ':
+          e.preventDefault()
+
           this.handleJump()
           break
         case 'arrowup':
+          e.preventDefault()
+
           this.handleJump()
           break
       }
@@ -46,25 +57,39 @@ export default class Movement {
     document.addEventListener('keyup', (e) => {
       switch (e.key.toLowerCase()) {
         case 'd':
+          e.preventDefault()
+
           this.handleGoRightKeyup()
           break
         case 'arrowright':
+          e.preventDefault()
+
           this.handleGoRightKeyup()
           break
         case 'arrowleft':
+          e.preventDefault()
+
           this.handleGoLeftKeyup()
           break
         case 'a':
+          e.preventDefault()
+
           this.handleGoLeftKeyup()
           break
         case 'w':
+          e.preventDefault()
+
           this.handleJumpKeyup()
           break
         case ' ':
           e.preventDefault()
+
+          e.preventDefault()
           this.handleJumpKeyup()
           break
         case 'arrowup':
+          e.preventDefault()
+
           this.handleJumpKeyup()
           break
       }
@@ -80,37 +105,57 @@ export default class Movement {
       this.handleJumpKeyup()
     })
     spaceBtn.addEventListener('mousedown', (e) => {
+      e.preventDefault()
+
       this.handleJump()
     })
     spaceBtn.addEventListener('mouseup', (e) => {
+      e.preventDefault()
+
       this.handleJumpKeyup()
     })
 
     //move right
     dBtn.addEventListener('touchstart', (e) => {
+      e.preventDefault()
+
       this.handleGoRight()
     })
     dBtn.addEventListener('touchend', (e) => {
+      e.preventDefault()
+
       this.handleGoRightKeyup()
     })
     dBtn.addEventListener('mousedown', (e) => {
+      e.preventDefault()
+
       this.handleGoRight()
     })
     dBtn.addEventListener('mouseup', (e) => {
+      e.preventDefault()
+
       this.handleGoRightKeyup()
     })
 
     //move left
     aBtn.addEventListener('touchstart', (e) => {
+      e.preventDefault()
+
       this.handleGoLeft()
     })
     aBtn.addEventListener('touchend', (e) => {
+      e.preventDefault()
+
       this.handleGoLeftKeyup()
     })
     aBtn.addEventListener('mousedown', (e) => {
+      e.preventDefault()
+
       this.handleGoLeft()
     })
     aBtn.addEventListener('mouseup', (e) => {
+      e.preventDefault()
+
       this.handleGoLeftKeyup()
     })
   }

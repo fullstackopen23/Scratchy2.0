@@ -98,14 +98,16 @@ export default class UI {
     })
 
     soundBtn.addEventListener('click', () => {
+      console.log('ah')
       if (coin.soundOn) {
         coin.soundOn = false
         soundBtn.src = soundOffImg
+        storage.storeAudioSettings(coin.soundOn)
       } else {
         coin.soundOn = true
         soundBtn.src = soundOnImg
+        storage.storeAudioSettings(coin.soundOn)
       }
-      storage.storeAudioSettings(coin.soundOn)
     })
 
     shopBtn.addEventListener('click', () => {

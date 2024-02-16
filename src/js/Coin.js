@@ -1,6 +1,7 @@
+import audio from '/audio/coin.mp3'
 import { collides } from './utils'
 const coinImg = document.getElementById('coin')
-const coinAudio = new Audio('/audio/coin.mp3')
+const coinAudio = new Audio(audio)
 
 export default class Coin {
   constructor(game) {
@@ -52,9 +53,7 @@ export default class Coin {
 
     if (collides(playerHitbox, this)) {
       game.score++
-      console.log(this.soundOn)
       if (this.soundOn) {
-        console.log(this.soundOn)
         coinAudio.play().catch((err) => console.log(err))
         if (coinAudio.paused) {
           coinAudio.play().catch((err) => console.log(err))

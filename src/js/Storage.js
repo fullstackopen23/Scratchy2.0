@@ -28,6 +28,8 @@ export default class Storage {
       } else {
         return true
       }
+    } else {
+      return true
     }
   }
 }

@@ -10,17 +10,18 @@ img {
 }
 
 html {
-  max-width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
   max-height: 100%;
-  max-width: 100%;
   background-color: #c0e7ea;
 }
 
 .wrapper {
   width: 100%;
+  overflow-x: hidden;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -327,13 +328,37 @@ button {
   }
 }
 
+@media (min-width: 350px) {
+  .img img {
+    width: 32px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p,
+  td,
+  th,
+  .input input,
+  .input button {
+    font-size: 23px;
+  }
+  #controlsContainer img {
+    height: 40px;
+  }
+
+  .leaderboardScreen {
+    td,
+    th {
+      font-size: 22px;
+    }
+  }
+}
+
 @media (min-width: 400px) {
   .img img {
     width: 66px;
   }
-  #controlsContainer img {
-    height: 30px;
-  }
+
   h2 {
     font-size: 40px;
   }
